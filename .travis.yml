@@ -1,0 +1,26 @@
+language: python
+
+python:
+- '3.2'
+- '3.3'
+- '3.4'
+- '3.5'
+- 3.5-dev
+- nightly
+
+install: pip install -r requirements.txt
+
+before_cache:
+- rm -f $HOME/.monstercatconnect/connect.cookies
+
+cache:
+  directories:
+  - "$HOME/.monstercatconnect/"
+
+script:
+- python setup_travis.py
+- python notifier.py test
+
+env:
+  global:
+  - secure: OZdv263/IeXPdaXWIqSzapob50w3K+1F0g/u5/G+I7tSjRIYPvAA24oBJHX0RkMzMqN43qk3iCrTdd86jifhlkF1/UdJUX9hvlAPYCnz9FGzzJc5zt+4Q843vcw4NvrIa07+JUjtWDZc5a23gJEwodtMf6BG1UqEOHtKGDDfocYub374C4RldqnTmAGoR9tLx6t8u4qXG/ikrF0CdTe6Ip1jICW+6El49dz5RUa1Jp6c3iOB4pqlRW+EdIwPvqkeuF94eF28cZsJHg/1/atXilOvcyRlVUITITpYvgkwK3Zfw+46xorbtN0cDheo9faDStmDGaapRmFs1lgNvt2C1Dd3vWvP42QUvOK9uiMQruS4v+UxN6WcJlNXLWa7MaUEPmjDW2WPjjwPEG+cMAMZTryNW0YfT2CNVf5MHPocswin7IHER7SOJsirslQK5fqGFb1Bqnteif/PMrPO2FTYzMSM1fCsl1Ay3ODtpdlP0umgRMcV/GnsX4FGPEE7cTigTpVU6FlwLJ0FLcuSjYfUnoWWlH0FYyJY6j9m09jDmjsd6aJIJ4hUYSzGzzhKUOcn6K1kA17ypouU+Y6ExpAMPX7bVnwhvJqzC3p08fzF/RdW+zAOBInkDu4GTa4RBdk4sZc7mTiR2qs2LiTXmDqZ1ahDPQPCrFgRtak9EDg440M=
