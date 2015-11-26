@@ -1,4 +1,4 @@
-# MonstercatConnectNotifier
+# MonstercatYoutubeNotifier
 [![Build Status](https://travis-ci.org/z3ntu/MonstercatYoutubeNotifier.svg)](https://travis-ci.org/z3ntu/MonstercatYoutubeNotifier)
 ## Requirements
 - Python 3 or newer
