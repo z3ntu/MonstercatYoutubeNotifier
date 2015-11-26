@@ -8,9 +8,10 @@ def main():
     config = open("config.py", "w")
 
     template = template_file.read()
-    template = template.replace("api_key=\"\"", "api_key=\""+os.environ['API_KEY']+"\"")
+    template = template.replace("api_key=\"\"", "api_key=\"" + os.environ['API_KEY'] + "\"")
 
     config.write(template)
+
 
 if __name__ == '__main__':
     main()
