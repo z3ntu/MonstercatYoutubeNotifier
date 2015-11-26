@@ -54,7 +54,7 @@ def main():
 
     if len(new_items):
         for new_item in new_items:
-            send_message(new_item[1])
+            send_message("Title: " + new_item[1] + "\nLink: https://www.youtube.com/watch?v=" + new_item[0])
     else:
         log("No new song!")
 
