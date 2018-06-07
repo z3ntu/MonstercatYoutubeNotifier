@@ -1,0 +1,6 @@
+[Unit]
+Description=MonstercatYoutubeNotifier
+
+[Service]
+Type=simple
+ExecStart=/root/git/MonstercatYoutubeNotifier/notifier.py cron
